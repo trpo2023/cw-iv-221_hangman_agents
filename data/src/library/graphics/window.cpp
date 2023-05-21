@@ -1,8 +1,6 @@
-#include "window.hpp"
 #include "globals.hpp"
-
-SDL_Window* sWindow = 0;
-SDL_Renderer* sRenderer = 0;
+#include "window.hpp"
+#include "path.hpp"
 
 int init_window(
         const char* title, int flags) // Функция инициализации окна (завершено)
@@ -35,8 +33,8 @@ SDL_Texture* load_texture(
         SDL_Texture* texture,
         std::string asset) // Загрузка текстуры (завершено)
 {
-    std::string path = "/home/egor/cw-iv-221_hangman_agents/assets/";
-    path = path + asset;
+    std::string path;
+    path = get_path(path, asset);
     surface = SDL_LoadBMP(path.c_str());
     if (surface == nullptr) {
         std::cout << "SDL_LoadBMP Error: " << SDL_GetError() << std::endl;

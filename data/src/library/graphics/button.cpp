@@ -1,3 +1,4 @@
+#include "globals.hpp"
 #include "button.hpp"
 #include "window.hpp"
 
