@@ -1,6 +1,7 @@
 #include "global.hpp"
 #include "library/info/info.hpp"
 #include "library/music/music.hpp"
+#include "library/missions/mission.hpp"
 #include "global.hpp"
 
 int volume = 50;
@@ -12,17 +13,13 @@ void free_stdin()
     std::cin.clear();
     std::cin.ignore(INT_MAX, '\n');
 }
-void open_missions(int number)
-{
-    std::cout << "Выбрана миссия " << number << " mission\n";
-}
+
 void open_map()
 {
     std::cout << "Какая-то карта\n";
 }
 void map()
 {
-    
     open_map();
     while (1)
     {
@@ -67,7 +64,6 @@ void parameters()
             free_stdin();
         }
     }
-    
 } 
 
 int main()
