@@ -1,0 +1,25 @@
+name: Build
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Check codestyle
+        run: git ls-files *.{cpp,hpp} | xargs clang-format -i --verbose && git diff --exit-code
+
+      - name: Install libs
+        run: sudo apt install libsdl2-dev -y && sudo apt install libsdl2-mixer-dev
+
+      - name: Build application
+        run: cd data && make create
+
+      - name: Build test
+        run: cd data && make test
+
+      - name: Run test
+        run: cd data && make runtest
