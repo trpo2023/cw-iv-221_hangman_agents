@@ -1,3 +1,12 @@
+<<<<<<< HEAD
 main
 
 Words.txt
+||||||| d17539e
+=======
+data/bin/hangman
+data/bin/test
+*.o
+*.d
+*.a
+>>>>>>> a42d5222f1343952b9043fdf9e93fdb4f6ef6fc0
