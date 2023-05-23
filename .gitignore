@@ -1,2 +1,5 @@
-window
-windowgdb
+data/bin/hangman
+data/bin/test
+*.o
+*.d
+*.a
