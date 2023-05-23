@@ -73,6 +73,15 @@ int main()
     dead.w = 1600;
     dead.h = 900;
     dead_t = load_texture(sRenderer, sSurface, dead_t, asset_dead);
+    
+    std::string asset_logo = "logo.bmp";
+    SDL_Rect logo;
+    SDL_Texture* logo_t = 0;
+    logo.x = 400;
+    logo.y = 100;
+    logo.w = 800;
+    logo.h = 300;
+    logo_t = load_texture(sRenderer, sSurface, logo_t, asset_logo);
 
     std::string asset_found = "Found.bmp";
     SDL_Rect found;
@@ -127,7 +136,7 @@ int main()
     PlayButton.drect.h = 100;
     PlayButton.drect.w = 300;
     PlayButton.drect.x = 1600 / 2 - PlayButton.drect.w / 2;
-    PlayButton.drect.y = 200;
+    PlayButton.drect.y = 450;
 
     Button OptionsButton;
     OptionsButton.asset = "Options.bmp";
@@ -139,10 +148,10 @@ int main()
     OptionsButton.drect.h = 100;
     OptionsButton.drect.w = 300;
     OptionsButton.drect.x = 1600 / 2 - OptionsButton.drect.w / 2;
-    OptionsButton.drect.y = 350;
+    OptionsButton.drect.y = 600;
 
     Button ContinueButton;
-    ContinueButton.asset = "Play.bmp";
+    ContinueButton.asset = "Continue.bmp";
     ContinueButton.get_texture();
     ContinueButton.srect.h = 100;
     ContinueButton.srect.w = 300;
@@ -154,7 +163,7 @@ int main()
     ContinueButton.drect.y = 600;
 
     Button BackButton;
-    BackButton.asset = "Play.bmp";
+    BackButton.asset = "Back.bmp";
     BackButton.get_texture();
     BackButton.srect.h = 100;
     BackButton.srect.w = 300;
@@ -175,7 +184,7 @@ int main()
     ExitButton.drect.h = 100;
     ExitButton.drect.w = 300;
     ExitButton.drect.x = 1600 / 2 - ExitButton.drect.w / 2;
-    ExitButton.drect.y = 500;
+    ExitButton.drect.y = 750;
 
     Button Letters[33];
     for (int i = 0; i < 33; i++) {
@@ -426,6 +435,7 @@ int main()
         }
         SDL_RenderClear(sRenderer);
         SDL_RenderCopy(sRenderer, sTexture, NULL, &background);
+        SDL_RenderCopy(sRenderer, logo_t, NULL, &logo);
         PlayButton.draw();
         OptionsButton.draw();
         ExitButton.draw();
