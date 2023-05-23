@@ -1,5 +1,5 @@
-#include "library/button.hpp"
 #include "library/globals.hpp"
+#include "library/button.hpp"
 #include "library/mouse.hpp"
 #include "library/strings.hpp"
 #include "library/window.hpp"

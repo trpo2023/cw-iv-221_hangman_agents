@@ -1,5 +1,5 @@
-#include "window.hpp"
 #include "globals.hpp"
+#include "window.hpp"
 #include "strings.hpp"
 
 int init_window(

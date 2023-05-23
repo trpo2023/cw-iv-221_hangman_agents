@@ -1,5 +1,5 @@
-#include "button.hpp"
 #include "globals.hpp"
+#include "button.hpp"
 #include "window.hpp"
 
 Button::Button()

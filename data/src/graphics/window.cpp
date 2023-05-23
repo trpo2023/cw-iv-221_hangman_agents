@@ -1,5 +1,5 @@
-#include "window.hpp"
 #include "globals.hpp"
+#include "window.hpp"
 
 SDL_Window* sWindow = 0;
 SDL_Renderer* sRenderer = 0;
