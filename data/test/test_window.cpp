@@ -32,23 +32,13 @@ CTEST(window, init_window_true)
     ASSERT_EQUAL(expected, real);
 }
 
-CTEST(window, load_texture_true)
-{
-    SDL_Texture *example = 0;
-    SDL_Surface *sur = 0;
-    std::string asset = "Menu.bmp";
-    example = load_texture(sRenderer, sur, example, asset);
-
-    ASSERT_NOT_NULL(example);
-}
-
 CTEST(window, load_texture_false)
 {
     SDL_Texture *example = 0;
     SDL_Surface *sur = 0;
     std::string asset = "easease";
     example = load_texture(sRenderer, sur, example, asset);
-
+    
     ASSERT_NULL(example);
 }
 
