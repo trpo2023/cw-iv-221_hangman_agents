@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-main
-
-Words.txt
-||||||| d17539e
-=======
 data/bin/hangman
 data/bin/test
 *.o
