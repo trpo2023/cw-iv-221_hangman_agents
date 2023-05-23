@@ -10,7 +10,7 @@ void open_missions(int number)
         mission_1();
         break;
     case 2:
-        std::cout << "Пока ничего 2\n";
+        mission_2();
         break;
     case 3:
         std::cout << "Пока ничего 3\n";
